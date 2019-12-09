@@ -84,6 +84,10 @@ if [ ! -f $CACHE_FILE ]; then
   cd ..
   rm -rf $IMAGE_MAGICK_DIR
 
+  # record compilation datetime
+
+  touch "$INSTALL_DIR/imagemagick-webp-compiled-at-$(date +"%FT%H%M%S")"
+
   # cache for future deploys
 
   echo "-----> Caching ImageMagick and libwebp installation"
